@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  
+    .rotate-box:hover {
+      transform: scale(1.05);
+      
+    }
+
+    .rotate-box img {
+      position: relative;
+      top: -50px;
+      z-index: 10;
+      border-radius: 30px;
+      border-color: blue;
+      border-width: 5px;
+      width:60px;
+      height:60px
+    }
+
+    .double-bg {
+        background: linear-gradient(135deg, #09325d 50%, #dfe4ea  50%);
+    }
+    .bg-gray-100{
+        margin-top: 70px;
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    .text-4xl{
+        color:white;
+        text-align: left;
+        margin-top: -15px;
+        margin-left: 30px;
+    }
+    .bg-white{
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    h3{
+        margin-top: -40px !important;
+        font-weight: bolder !important;
+    }
+    .container{
+        border-radius: 10px;
+    }
+    .text-600{
+        color: #09325d;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+  <div id="assignment" class="container mx-auto px-4 py-12 double-bg">
+    <div class="text-center mb-8">
+      <h2 class="text-4xl font-bold text-800">OUR SERVICES</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-md rotate-box">
+        <div class="flex justify-center mb-4">
+          <img src="./eps.png" alt="Icon 1" class="w-12 h-12">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 text-center mb-2">Emergency Plumbing Services</h3>
+        <p class="text-gray-700 text-center mb-4">Our plumbers are ready 24/7 for emergencies.</p>
+        <div class="text-center">
+          <a href="#" class="text-600 font-bold hover:underline">Explore this service &gt;</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-md rotate-box">
+        <div class="flex justify-center mb-4">
+          <img src="./pd.png" alt="Icon 2" class="w-12 h-12">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 text-center mb-2">Plumbing and Drains</h3>
+        <p class="text-gray-700 text-center mb-4">We make thousands of repairs every day.</p>
+        <div class="text-center">
+          <a href="#" class="text-600 font-bold hover:underline">Explore this service &gt;</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-md rotate-box">
+        <div class="flex justify-center mb-4">
+          <img src="./wd.png" alt="Icon 3" class="w-12 h-12">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 text-center mb-2">Water Damage</h3>
+        <p class="text-gray-700 text-center mb-4">State-of-the-art water extraction equipment.</p>
+        <div class="text-center">
+          <a href="#" class="text-600 font-bold hover:underline">Explore this service &gt;</a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white p-6 rounded-lg shadow-md rotate-box">
+        <div class="flex justify-center mb-4">
+          <img src="./wh.png" alt="Icon 4" class="w-12 h-12">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 text-center mb-2">Water Heaters</h3>
+        <p class="text-gray-700 text-center mb-4">Trust us for repair and replacement of water heaters.</p>
+        <div class="text-center">
+          <a href="#" class="text-600 font-bold hover:underline">Explore this service &gt;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    
+    document.querySelectorAll('.rotate-box').forEach((box) => {
+      box.addEventListener('mouseenter', () => {
+        anime({
+          targets: box,
+          scale: 1.1,
+          duration: 500,
+          easing: 'easeInOutQuad'
+        });
+      });
+      box.addEventListener('mouseleave', () => {
+        anime({
+          targets: box,
+          scale: 1,
+          duration: 500,
+          easing: 'easeInOutQuad'
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
